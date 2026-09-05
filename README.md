@@ -7,3 +7,4 @@ Discord theme based around macOS 27 Golden Gate Night wallpaper with SF Pro Roun
 
 ## Screenshots
 
+![Main View](/assets/Channels-View.png "Channels View")

@@ -1,0 +1,111 @@
+* {
+    font-family: 'SF Pro Rounded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* === Background image on the app root === */
+html, body, #app-mount,
+[class^="appMount"], [class*=" appMount"],
+[class^="app_"], [class*=" app_"] {
+    background-image: url("https://www.iclarified.com/images/news/101095/479305/479305.jpg") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+/* === Make Discord's opaque panels see-through so the image shows === */
+[class^="bg_"], [class*=" bg_"],
+[class^="base_"], [class*=" base_"],
+[class^="container_"], [class*=" container_"],
+[class^="chatContent_"], [class*=" chatContent_"],
+[class^="content_"], [class*=" content_"],
+[class^="sidebar_"], [class*=" sidebar_"],
+[class^="guilds_"], [class*=" guilds_"],
+[class^="panels_"], [class*=" panels_"],
+[class^="chat_"], [class*=" chat_"] {
+    background-color: transparent !important;
+}
+
+/* ============================================================
+   Shared radius so activity box + account panel match the
+   message box exactly
+   ============================================================ */
+:root {
+    --panel-match-radius: 12px;
+    --panel-match-bg: #2b2d31;
+}
+
+/* Message/chat input box */
+[class*="channelTextArea"] {
+    border-radius: var(--panel-match-radius) !important;
+    background-color: var(--panel-match-bg) !important;
+    background-image: none !important;
+}
+
+/* === Account panel (avatar, username, mute/deafen buttons) === */
+.panels__5e434,
+[class^="panels_"], [class*=" panels_"],
+[class^="panels-"], [class*=" panels-"] {
+    background-color: var(--panel-match-bg) !important;
+    background-image: none !important;
+    border-radius: var(--panel-match-radius) !important;
+}
+
+.panels__5e434 div,
+.channelTextArea_f75fb0 div,
+.channelTextArea__74017 div {
+    background-color: transparent !important;
+}
+
+
+/* === Custom emoji button icon (happy face from the sprite, fixed colour) === */
+[aria-label*="emoji" i] svg {
+    display: none !important;
+}
+[aria-label*="emoji" i] {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAADAElEQVR4nNWZ323bMBDGfxIygLqBM0GaCcq+EOCbM0GcCeJMYGsCOxMkmSDOkwC9hJ0g7gRVJqg2aB9IGbJimRQVQc4HGJIp8u7D6cT7w4geyHKdAAL4AUyA70BifwAlUNjrFvgFaCVFGaozClmU5VoAixrBrtgAT0qKTdeFnQhnuZ4CK4w1PwMFkCopHn0XeBHOcj0BHjCvfwhsgSslReGaGLsmZLm+Bd4YjiwY13rLcj13TTxq4SzXC2D5KZT8sVRSpG0PWy08ElmApdV9EAcJj0i2QivpDy5hfXY9NCNP3Ckp1vWBPcJ2N3gjbG8dAiVwWd89mi7xzOmQBcPloT6wI5zleobZXk4NwgYsYN/CrV/mCWBV3cSwC7mTkcj4YGLzl52Fr8fj4o0FQGRTxL/jcvFCCZzH+OcIBXAHnCspIiVFBFwCT1aYj8IU+Al8q62/sbJdSAARZbleA7eOyfeYGH+QmPWvV4eMq2P5ry+PKMv1K8etfK+kmDsEkeX637Hn1qIuGWuOk36JcQeKtYeiqccc4ZqDO3+5OMO9nZU1pQnma53ZcW2vMw8yz1muN7X5CfCIyRcqHYlDRhK5XqUVmlpFK09yXdBJvg/hk0KM35Z0Kii/GuEixlSsXwXlGfDeQ8AGuPHt5NgCYQVMA/X9jjFbUyjuu7SdbOXw1EOfrgh7K21ABKxJAnUB6NhaaBso4NYGEy/UAk8IXpQUZZUPtzYuHEioVQMeWBBeKDxCrWrOcv2nh7A1pqlXHnpoLdsnShZKinOAs9rgHaZqDsEcmGa5ToGtkmJriU4w1cycfr6784BmX8KVao6BrZLisvrT7EvccFqRrwSu6gN7hO0+GfoBDoG02TP+0Ay0vaxTIJ02+2rQ0r1UUiwZl3RqOXxAa394RNKtZMHjjMO28RcM3yQsaXGDOrocyjwzXLNQY7K+wjWx67HXjH7htYkCU4RufBeEHixOMRFsGrC8xCRbqZJCd10cRLhC7ehWABcYP5+wf3RbEXzHvPpeR7f/AXzuC+mOZQXJAAAAAElFTkSuQmCC") !important;
+    background-size: 18px 18px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* === Channel/sidebar list background box === */
+.header_f37cb1 {
+    background-color: #151518 !important;
+    background-image: none !important;
+    border-top-left-radius: var(--panel-match-radius) !important;
+    border-top-right-radius: var(--panel-match-radius) !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+#channels.scroller__629e4, #channels,
+#direct-messages.scroller__629e4, #direct-messages {
+    background-color: #151518 !important;
+    background-image: none !important;
+    backdrop-filter: none !important;
+    filter: none !important;
+    border-radius: 0 !important;
+    margin-bottom: 0 !important;
+}
+#channels::before, #channels::after {
+    display: none !important;
+}
+
+/* === Remove the header's gradient/fade background === */
+.container__9293f.themed__9293f, .themed__9293f {
+    background: var(--panel-match-bg) !important;
+}
+
+/* === Background box behind the toolbar icons (Threads/Pins/Notifications/etc) === */
+.toolbar__9293f {
+    background-color: var(--panel-match-bg) !important;
+    border-radius: var(--panel-match-radius) !important;
+    padding: 4px 8px !important;
+}
+
+/* === Background box behind the search bar === */
+.search__49676 {
+    background-color: var(--panel-match-bg) !important;
+    border-radius: var(--panel-match-radius) !important;
+}
